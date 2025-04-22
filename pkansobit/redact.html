@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактировать событие</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Редактировать событие</h1>
+            <a href="index.html" class="btn secondary">Назад к событиям</a>
+        </header>
+        
+        <main>
+            <form id="editEventForm" class="event-form">
+                <div class="form-group">
+                    <label for="editEventTitle">Название события</label>
+                    <input type="text" id="editEventTitle" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="editEventDate">Дата</label>
+                    <input type="date" id="editEventDate" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="editEventCategory">Категория</label>
+                    <select id="editEventCategory" required>
+                        <option value="personal">Личные</option>
+                        <option value="work">Рабочие</option>
+                        <option value="social">Общественные</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="editEventDescription">Описание</label>
+                    <textarea id="editEventDescription" rows="4"></textarea>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn primary">Сохранить изменения</button>
+                    <button type="button" id="deleteEventBtn" class="btn danger">Удалить событие</button>
+                    <button type="button" class="btn secondary" onclick="window.location.href='index.html'">Отмена</button>
+                </div>
+            </form>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
